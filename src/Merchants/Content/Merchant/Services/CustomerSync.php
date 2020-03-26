@@ -3,11 +3,13 @@
 namespace Shopware\Production\Merchants\Content\Merchant\Services;
 
 use Doctrine\DBAL\Connection;
-use Shopware\Core\Checkout\Customer\CustomerEvents;
 use Shopware\Core\Defaults;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
+use Shopware\Core\Framework\DataAbstractionLayer\Event\EntityDeletedEvent;
+use Shopware\Core\Framework\DataAbstractionLayer\Event\EntityWrittenContainerEvent;
 use Shopware\Core\Framework\DataAbstractionLayer\Event\EntityWrittenEvent;
 use Shopware\Core\Framework\Uuid\Uuid;
+use Shopware\Production\Merchants\Content\Merchant\MerchantDefinition;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class CustomerSync implements EventSubscriberInterface

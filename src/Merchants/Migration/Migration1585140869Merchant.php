@@ -43,7 +43,6 @@ CREATE TABLE `merchant_product` (
     CONSTRAINT `fk.merchant_product.merchant_id` FOREIGN KEY (`merchant_id`) REFERENCES `merchant` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT `fk.merchant_product.product_id` FOREIGN KEY (`product_id`,`product_version_id`) REFERENCES `product` (`id`,`version_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 SQL;
 
         $connection->executeQuery($sql);
