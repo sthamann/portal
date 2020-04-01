@@ -19,7 +19,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
 /**
- * @RouteScope(scopes={"storefront"})
+ * @RouteScope(scopes={"merchant-api"})
  */
 class ResetPasswordController
 {
